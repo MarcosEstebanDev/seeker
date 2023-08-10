@@ -7,17 +7,14 @@ return (
         <SvgGithub className='h-full w-full top-2 relative p-1' />
         </div>
         <div className='section-title'>
-            <h2>the octocat</h2>
+            <h2 className='text-3xl font-bold '>The octocat</h2>
             <p>@octocat</p>
         </div>
-        <p className='section-date'>Joined 25 Jan 2011</p>
+        <p className='section-date lg:text-right'>Joined 25 Jan 2011</p>
         <p className='section-description'>Lorem imsum Nulla iaculis facilisis
             magna at congue. Suspendisse commodo convallis neque, vel ultrices neque egestas ut.
             Proin ullamcorper pretium purus nec sollicitudin. Proin scelerisque vehicula turpis eget mattis.
-            Phasellus pharetra nisl id ultricies aliquet. Morbi ante quam, ullamcorper in est eu,
-            tempor egestas ligula. Donec cursus, orci sed interdum mollis, ipsum nunc accumsan nulla,
-            eget posuere ex nisl non felis. Etiam vel ornare orci.
-            Cras ac lorem lorem. Vivamus vel felis non neque condimentum condimentum eget non orci.</p>
+            Phasellus pharetra nisl id ultricies aliquet. </p>
        <div className="section-number flex justify-around bg-blue-950">
             <article>
                 <p>Repos</p>
