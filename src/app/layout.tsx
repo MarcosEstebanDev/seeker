@@ -16,10 +16,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body className={space.className}>
-        <header className='grid place-content-center min-h-screen bg-gray-500'>
-         <div className=' sm:w-[500px] md:w-600px] lg:w-[700px]'>
+        <header className='grid place-content-center min-h-screen bg-blue-950 '>
+         <div className='sm:w-[500px] md:w-600px] lg:w-[700px] '>
           <Navbar />
           <main>{children}</main>
           </div>
