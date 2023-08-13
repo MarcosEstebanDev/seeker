@@ -1,9 +1,9 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Space_Grotesk} from 'next/font/google'
+import { Roboto_Mono} from 'next/font/google'
 import Navbar from './components/Navbar'
 
-const space = Space_Grotesk({ subsets: ['latin'] })
+const space = Roboto_Mono({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
