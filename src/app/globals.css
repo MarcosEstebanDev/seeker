@@ -4,7 +4,7 @@
 
 .grid-areas {
     display: grid;
-    grid-template-columns: repeat(1fr 2fr 2fr) ;
+    grid-template-columns: 1fr 2fr 2fr ;
     grid-template-areas:
     "a b b"
     "a c c"
@@ -16,7 +16,7 @@
     grid-area:a;
 }
 .section-title {
-    grid-area:b;
+    grid-area: b;
 }
 .section-date {
     grid-area:c;
