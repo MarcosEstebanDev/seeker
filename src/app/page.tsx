@@ -6,7 +6,7 @@ import type { User } from "./interface/user"
 
 const Home = () => {
   const [user, setUser] = useState<User | null>(null)
-  const [error, setError] = useState<String | null>(null)
+  const [error, setError] = useState<string | null>(null)
   const getUser = async (username: string)=>{
     const res = await fetch(`https://api.github.com/users/${username}`)
     if(!res.ok){
