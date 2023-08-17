@@ -4,7 +4,7 @@ import React, { useState,useEffect } from 'react'
 import SvgSun from './icons/SunIcons'
 import SvgMoon from './icons/MoonIcon';
 
-const initialTheme =()=>{
+const initialTheme = () => {
   if (typeof window !== "undefined") {
     if (localStorage.getItem("theme")) {
       return localStorage.getItem("theme") as "light" | "dark";
