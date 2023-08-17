@@ -5,14 +5,26 @@ import SvgSun from './icons/SunIcons'
 import SvgMoon from './icons/MoonIcon';
 
 const initialTheme =()=>{
-  if(localStorage.getItem("theme")){
-    return localStorage.getItem("theme") as "light" | "dark"
+  if (typeof window !== "undefined") {
+    if (localStorage.getItem("theme")) {
+      return localStorage.getItem("theme") as "light" | "dark";
+    }
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
   }
-  return window.matchMedia("(prefers-color-scheme:dark)").matches ? "dark" : "light";
-} 
+
+  return "dark";
+}
 
 const Navbar = () => {
-  const[theme, setTheme]=useState<"light" | "dark">(initialTheme)
+  const [hasMounted, setHasMounted] = useState(false);
+  const[theme, setTheme]=useState<"light" | "dark">(initialTheme())
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
+
   useEffect(()=>{
     if(theme==="dark"){
       document.documentElement.classList.add("dark")
@@ -21,6 +33,11 @@ const Navbar = () => {
     }
     localStorage.setItem("theme",theme)
   },[theme])
+
+  if (!hasMounted) {
+    return <>Cargando...</>;
+  }
+
   const handleTheme = () =>{
     setTheme(theme === "light" ? "dark" : "light")
   }
